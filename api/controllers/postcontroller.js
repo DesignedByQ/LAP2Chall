@@ -6,7 +6,7 @@ const Post = require('../models/postmodels')
 async function index(req, res) {
     try {
         const posts = await Post.all;
-        res.status(200).json(authors);
+        res.status(200).json(posts);
     } catch (err) {
         res.status(500).send(err);
     }

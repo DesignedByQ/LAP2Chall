@@ -8,7 +8,7 @@ services:
       - 3000:3000
     environment: 
       - DB_NAME=post
-      - DB_CONNECTION=mongodb://:ch:postpass@db:27017
+      - DB_CONNECTION=mongodb://ch:postpass@db:27017
     depends_on:
       - db
     volumes:
@@ -21,7 +21,7 @@ services:
     image: mongo:latest
     volumes:
       - "dbdata:/var/lib/mongodb/data"
-      - "../db/seeds.js:/docker-entrypoint-initdb.d/seeds.js:ro"
+      - "./db/seeds.js:/docker-entrypoint-initdb.d/seeds.js:ro"
     environment: 
       - MONGO_INITDB_ROOT_USERNAME=ch
       - MONGO_INITDB_DATABASE=post
