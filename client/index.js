@@ -17,11 +17,14 @@ async function getAllPosts(){
         let jsonData = await response.json()
         let postContainer = document.getElementById('postResults--container')
         for(let i=0; i<jsonData.length; i++){
-            let card = document.createElement('div')
+            let card = document.createElement('p')
             card.classList.add('post')
             card.id = `card${i}`
-            card.textContent = `${jsonData[i].title, jsonData[i].author, jsonData[i].body}`
+            card.textContent = `Title:${jsonData[i].title}
+                                Author:${jsonData[i].name} 
+                                Content:${jsonData[i].body}`
             postContainer.append(card);
+            console.log(jsonData[i].title)
         }
     } catch(err) {
         console.log(err)
@@ -39,7 +42,7 @@ function addPost (e) {
         title: e.target.titlebox.value, 
         name: e.target.authorbox.value, 
         body: e.target.story.value, 
-        img: e.target.chosefile
+
     }
     const methods = {
         method: 'POST',
@@ -52,6 +55,7 @@ function addPost (e) {
     .then(res => res.json())
     // .then(appendSinglePost)
     .then(() => e.target.reset())
+    .then(() => location.reload())
     .catch(console.warn)
     
     console.log(content)
