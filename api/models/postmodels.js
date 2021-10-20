@@ -38,7 +38,7 @@ class Post {
         });
     }
 
-    static create(title, name, body, imgsrc=null ){
+    static create(title, name, body, imgsrc ){
         return new Promise (async (resolve, reject) => {
             try {
                 const db = await init();

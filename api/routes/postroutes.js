@@ -4,5 +4,6 @@ const postController = require('../controllers/postcontroller')
 
 router.get('/', postController.index)
 router.get('/:id', postController.show)
+router.post('/', postController.create)
 
 module.exports = router;

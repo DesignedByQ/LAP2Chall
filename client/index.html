@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
     <title>Story Board</title>
+
 </head>
 <html>
 <body>
@@ -18,24 +20,26 @@
     </header>
 
     <main>
-        <form action="">
-            <div id="titlearea">
-                <input type="text" name="title" id="titlebox" placeholder="Title">
-            </div>
 
-            <div id="authorarea">
-                <input type="text" name="author" id="authorbox" placeholder="Author">
-            </div>
-
-            <div id="textarea">
-                <textarea name="story" id="story" placeholder="Add your story here" cols="30" rows="10"></textarea>
-            </div>
-
-            <div id="captionarea">
-                Caption
-            </div>
-
-            <div id="filearea">
+        <div id="postEntry">
+            <form action="" id='formPost'>
+                <div id="titlearea">
+                    <input type="text" name="title" id="titlebox" placeholder="Title">
+                </div>
+    
+                <div id="authorarea">
+                    <input type="text" name="author" id="authorbox" placeholder="Author">
+                </div>
+    
+                <div id="textarea">
+                    <textarea name="story" id="story" placeholder="Add your story here" cols="30" rows="10"></textarea>
+                </div>
+    
+                <!-- <div id="captionarea">
+                    Caption
+                </div>
+    
+                <div id="filearea">
                 <div id="fileinput">
                     <label for="choseFile">Click here to chose a file</label>
                     <input type="file" name="files" id="choseFile" accept="image/*" onchange="showPreview(event);">
@@ -43,12 +47,16 @@
                         <img src="" alt="" id="file-ip-1-preview">
                     </div>
                 </div>
-            </div>
+            </div> -->
+    
+                <div id="buttonarea">
+                    <input type="submit" name="button" value="Publish" id="button">
+                </div>
+            </form>
+        </div>
 
-            <div id="buttonarea">
-                <input type="submit" name="button" value="Publish" id="button">
-            </div>
-        </form>
+        <div id='postResults--container'></div>
+
     </main>
 
     <footer>

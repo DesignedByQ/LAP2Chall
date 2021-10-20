@@ -24,6 +24,5 @@ DesignedByQ - Henry Opara - Frontend Developer
 ### Wins & Loses
 
 Wins - All routes working and figured out how to store posts in db and show once published.
-Loses - Data isn't saved upon server start up and couldn't work out how users could add a picture.
-
+Loses - Data isn't saved upon server start up and couldn't work out how users could add a picture
 
