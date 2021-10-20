@@ -12,20 +12,14 @@ async function index(req, res) {
     }
 }
 
+async function show(req, res) {
+    try {
+        const post = await Post.findById(req.params.id);
+        
+        res.status(200).json(post);
+    } catch (err) {
+        res.status(500).send(err);
+    };
+}
 
-
-
-
-
-
-
-// router.get('/', async (req, res) => {
-//     try{
-//         const posts = await Post.all
-//         res.json(posts)
-//     } catch (err) {
-//         res.status(500).json({err})
-//     }
-// })
-
-module.exports = { index };
+module.exports = { index, show };
