@@ -91,31 +91,35 @@
     </header>
 
     <main>
-        <form action="">
-            <div id="titlearea">
-                <input type="text" name="title" id="titlebox" placeholder="Title">
-            </div>
+        <div id="postEntry">
+            <form action="">
+                <div id="titlearea">
+                    <input type="text" name="title" id="titlebox" placeholder="Title">
+                </div>
+    
+                <div id="authorarea">
+                    <input type="text" name="author" id="authorbox" placeholder="Author">
+                </div>
+    
+                <div id="textarea">
+                    <textarea name="story" id="story" placeholder="Add your story here" cols="30" rows="10"></textarea>
+                </div>
+    
+                <div id="captionarea">
+                    Caption
+                </div>
+    
+                <div id="filearea">
+                    <input type="file" name="files" id="choseFile">
+                </div>
+    
+                <div id="buttonarea">
+                    <input type="submit" name="button" value="Publish" id="button">
+                </div>
+            </form>
+        </div>
 
-            <div id="authorarea">
-                <input type="text" name="author" id="authorbox" placeholder="Author">
-            </div>
-
-            <div id="textarea">
-                <textarea name="story" id="story" placeholder="Add your story here" cols="30" rows="10"></textarea>
-            </div>
-
-            <div id="captionarea">
-                Caption
-            </div>
-
-            <div id="filearea">
-                <input type="file" name="files" id="choseFile">
-            </div>
-
-            <div id="buttonarea">
-                <input type="submit" name="button" value="Publish" id="button">
-            </div>
-        </form>
+        <div id='postResults--container'></div>
     </main>
 
     <footer>
