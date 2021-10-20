@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<<<<<<< HEAD
+
     <style>
         header {
             background-color: lightgrey;
@@ -37,6 +37,12 @@
             justify-content: center;
             margin: auto;
             padding: 12.5px;
+            width: 400px;
+            height: 200px;
+        }
+
+        #story {
+            resize: none;
         }
 
         #captionarea {
@@ -44,6 +50,19 @@
             justify-content: center;
             margin: auto;
             padding: 12.5px;
+        }
+
+        #filearea {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            padding: 12.5px;
+        }
+
+        #choseFile {
+            border: 3px solid darkgray;
+            background-color: white;
+            border-radius: 5px;
         }
 
         #buttonarea {
@@ -65,7 +84,7 @@
 <html>
 <body>
     <header>
-        <div class="heading">POST YOUR STORIES HERE </div> 
+        <div class="heading">POST YOUR STORIES BELOW! </div> 
         <nav>
 
         </nav>
@@ -86,7 +105,11 @@
             </div>
 
             <div id="captionarea">
-                <img src="" alt="Caption">
+                Caption
+            </div>
+
+            <div id="filearea">
+                <input type="file" name="files" id="choseFile">
             </div>
 
             <div id="buttonarea">
