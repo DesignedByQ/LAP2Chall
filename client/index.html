@@ -4,82 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        header {
-            background-color: lightgrey;
-            margin: 25px;
-            padding: 50px;
-        }
-
-        .heading {
-            text-align: center;
-        }
-
-        #titlearea {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            margin: auto;
-            padding: 12.5px;
-        }
-
-        #authorarea {
-            display: flex;
-            justify-content: center;
-            margin: auto;
-            padding: 12.5px;
-        }
-
-        #textarea {
-            display: flex;
-            justify-content: center;
-            margin: auto;
-            padding: 12.5px;
-            width: 400px;
-            height: 200px;
-        }
-
-        #story {
-            resize: none;
-        }
-
-        #captionarea {
-            display: flex;
-            justify-content: center;
-            margin: auto;
-            padding: 12.5px;
-        }
-
-        #filearea {
-            display: flex;
-            justify-content: center;
-            margin: auto;
-            padding: 12.5px;
-        }
-
-        #choseFile {
-            border: 3px solid darkgray;
-            background-color: white;
-            border-radius: 5px;
-        }
-
-        #buttonarea {
-            display: flex;
-            justify-content: center;
-            margin: auto;
-            padding: 12.5px;
-        }
-
-        #button {
-            border: 3px solid darkgray;
-            background-color: white;
-            border-radius: 5px;
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>Story Board</title>
 </head>
 <html>
 <body>
@@ -109,7 +36,13 @@
             </div>
 
             <div id="filearea">
-                <input type="file" name="files" id="choseFile">
+                <div id="fileinput">
+                    <label for="choseFile">Click here to chose a file</label>
+                    <input type="file" name="files" id="choseFile" accept="image/*" onchange="showPreview(event);">
+                    <div class="preview"> 
+                        <img src="" alt="" id="file-ip-1-preview">
+                    </div>
+                </div>
             </div>
 
             <div id="buttonarea">
