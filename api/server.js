@@ -5,11 +5,11 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
-const booksRoutes = require('./routes/books')
-const authorsRoutes = require('./routes/authors')
-server.use('/books', booksRoutes)
-server.use('/authors', authorsRoutes)
+const postRoutes = require('./routes/postroutes')
 
-server.get('/', (req, res) => res.send('Welcome to the library'))
+server.use('/posts', postRoutes)
+
+
+server.get('/', (req, res) => res.send('Welcome to TeleClone'))
 
 module.exports = server
